@@ -1,0 +1,80 @@
+<div class="widgets">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="btn-list clearfix ng-scope">
+        <li>
+            <button type="button" class="btn btn-primary">添加</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-default" disabled>编辑</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-default" disabled>删除</button>
+        </li>
+        <li>
+            <button type="button" ng-click="testFn()" class="btn btn-default">导出excel</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-default">导入excel</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div ba-panel ba-panel-title="巡视任务表" ba-panel-class="with-scroll">
+        <div class="horizontal-scroll">
+          <table class="table" st-table="tasksData">
+            <thead>
+            <tr class="sortable ">
+              <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+              <th st-sort="taskName">任务名称</th>
+              <th st-sort="taskType">任务种类</th>
+              <th st-sort="status">状态</th>
+              <th st-sort="startDate">任务日期</th>
+              <th st-sort="endDate">结束日期</th>
+              <th>任务周期</th>
+              <th>任务间隔</th>
+              <th>工作人员</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th><input st-search="taskName" class="input-sm form-control search-input"
+                         type="search"/></th>
+              <th></th>
+              <th></th>
+              <th><input st-search="startDate" class="input-sm form-control search-input"
+                         type="search"/></th>
+              <th><input st-search="endDate" class="input-sm form-control search-input" type="search"/>
+              </th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in tasksData">
+              <td class="table-id">{{item.id}}</td>
+              <td>{{item.taskName}}</td>
+              <td>一般巡视</td>
+              <td><button type="button" class="btn btn-primary">发布</button></td>
+              <td>{{item.startDate}}</td>
+              <td>{{item.endDate}}</td>
+              <td>周</td>
+              <td>1</td>
+              <td><span class="tag label label-primary">{{item.patroler}}<span></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+              <td colspan="9" class="text-center">
+                <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+              </td>
+            </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
