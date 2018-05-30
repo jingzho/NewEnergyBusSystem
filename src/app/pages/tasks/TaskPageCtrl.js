@@ -9,8 +9,9 @@
       .controller('TasksPageCtrl', TasksPageCtrl);
 
   /** @ngInject */
-  function TasksPageCtrl($scope, $filter, editableOptions, editableThemes) {
+  function TasksPageCtrl($scope) {
     $scope.smartTablePageSize = 15;
+    $scope.modalDatas = {};
     // generate task data
     const taskNames = ['浦东快充电站周巡视-中兴', '浦东快充电站周巡视-南华', '松江快充电站周巡视-中兴', '市区快充电站周巡视-中兴'];
     const startDates = ['2018-03-07', '2018-03-08', '2018-03-09'];
@@ -47,20 +48,36 @@
           });
       }
     }();
-    $scope.testFn = function () {
-      var http = new XMLHttpRequest()
-      http.onreadystatechange= function () {
-        if (http.readyState==4)
-        {// 4 = "loaded"
-          if (http.status==200)
-          {// 200 = OK
-            console.log(http.response)
+      $scope.addTask = function () {
+        $uibModal.open({
+          animation: true,
+          templateUrl: 'app/pages/ui/modals/addTask.html',
+          size: 'md',
+          resolve: {
+            items: function () {
+            return $scope.items;
+            }
           }
-        }
-      };
-      http.open("GET","http://localhost:3100/",true);
-      http.send(null);
-    }
+        })
+      }
+      $scope.ok = function (e) {
+          console.log(e);
+          console.log($scope.modalDatas);
+            var http = new XMLHttpRequest()
+            http.onreadystatechange= function () {
+              if (http.readyState==4)
+              {// 4 = "loaded"
+                if (http.status==200)
+                {// 200 = OK
+                  console.log(http.response)
+                }
+              }
+            };
+            http.setRequestHeader()
+            http.open("POST","http://localhost:3100/addTask",true);
+            http.send($scope.modalDatas);
+      }
+
 /*    $scope.tasksData = [
       {
         id: 1,

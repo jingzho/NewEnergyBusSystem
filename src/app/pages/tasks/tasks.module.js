@@ -20,13 +20,17 @@
             icon: 'ion-ios-clock-outline',
             order: 300,
           },
-        }).state('tasks.alltasks', {
-          url: '/tasks/alltasks',
+        }).state('tasks.allTasks', {
+          url: '/tasks/allTasks',
           title: '巡视任务',
-          templateUrl: 'app/pages/tasks/alltasks.html',
+          templateUrl: 'app/pages/tasks/allTasks.html',
           sidebarMeta: {
             order: 0,
           },
+        }).state('tasks.addTask', {
+            url: '/tasks/addTask',
+            title: '添加巡视任务',
+            templateUrl: 'app/pages/tasks/addTask.html',
         }).state('tasks.results', {
           url: '/tasks/results',
           title: '巡视结果',
@@ -34,19 +38,12 @@
           sidebarMeta: {
             order: 1,
           },
-        }).state('tasks.routes', {
-          url: '/tasks/routes',
-          title: '巡视轨迹',
-          disabled: true,
-          sidebarMeta: {
-            order: 2,
-          },
         }).state('tasks.forms', {
           url: '/tasks/forms',
           title: '巡视表单',
           disabled: true,
           sidebarMeta: {
-            order: 3,
+            order: 2,
           },
         });
     $urlRouterProvider.when('/tables','/tables/basic');

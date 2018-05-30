@@ -45,13 +45,13 @@
               <div class="form-group col-md-6">
                 <label for="" class="col-sm-2 control-label">区域</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" placeholder="浦东供电公司">
+                  <input type="text" ng-model="myForm.area" class="form-control" placeholder="浦东供电公司">
                 </div>
               </div>
               <div class="form-group col-md-6">
                 <label for="" class="col-sm-2 control-label">名称</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" placeholder="{{busStopInfosData[selectedIndex].name}}">
+                  <input type="text" ng-model="myForm.name" class="form-control" placeholder="{{busStopInfosData[selectedIndex].name}}">
                 </div>
               </div>
             </form>
@@ -209,6 +209,7 @@
                 </div>
               </div>
             </form>
+            <button ng-click="saveClick()">asdas</button>
           </div>
         </uib-tab>
         <uib-tab heading="场地信息">
