@@ -38,6 +38,20 @@
           sidebarMeta: {
             order: 1,
           },
+        }).state('tasks.subModule', {
+          url: '/tasks/url',
+          title: '编辑页面',
+          templateUrl: 'app/pages/tasks/xxxx.html',
+          sidebarMeta: {
+            order: 1,
+          },
+        }).state('tasks.routes', {
+          url: '/tasks/routes',
+          title: '巡视轨迹',
+          disabled: true,
+          sidebarMeta: {
+            order: 2,
+          },
         }).state('tasks.forms', {
           url: '/tasks/forms',
           title: '巡视表单',
