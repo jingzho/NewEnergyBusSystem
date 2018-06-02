@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('demo.pages.tasks', ['ui.select'])
+  angular.module('demo.pages.tasks', ['ui.select','ngSanitize'])
     .config(routeConfig);
 
   /** @ngInject */
@@ -27,11 +27,20 @@
           sidebarMeta: {
             order: 0,
           },
+
         }).state('tasks.addTask', {
-            url: '/tasks/addTask',
+            url: '/tasks/addTask/',
             title: '添加巡视任务',
             controller: 'AddTaskCtrl',
             templateUrl: 'app/pages/tasks/addTask.html',
+
+        }).state('tasks.submitTask', {
+            url: '/tasks/submitTask/',
+            // url: '/tasks/submitTask/:taskId',
+            title: '填写巡视任务',
+            controller: 'SubmitTaskCtrl',
+            templateUrl: 'app/pages/tasks/submitTask.html',
+
         }).state('tasks.results', {
           url: '/tasks/results',
           title: '巡视结果',

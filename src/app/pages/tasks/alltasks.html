@@ -31,7 +31,7 @@
               <th st-sort="taskName">任务名称</th>
               <th st-sort="taskType">任务种类</th>
               <th st-sort="status">状态</th>
-              <th st-sort="startDate">任务日期</th>
+              <th st-sort="startDate">开始日期</th>
               <th st-sort="endDate">结束日期</th>
               <th>任务周期</th>
               <th>任务间隔</th>
@@ -55,7 +55,7 @@
             <tbody>
             <tr ng-repeat="item in tasksData">
               <td class="table-id">{{item.id}}</td>
-              <td>{{item.taskName}}</td>
+              <td ><a href="#/tasks/submitTask">{{item.taskName}}</a></td>
               <td>一般巡视</td>
               <td><button type="button" class="btn btn-primary">发布</button></td>
               <td>{{item.startDate}}</td>
