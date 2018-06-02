@@ -21,20 +21,20 @@
             </div>
             <div class="form-group">
             <ui-select ng-model="selectedTaskType.selected"
-               class="btn-group bootstrap-select form-control"
-               ng-disabled="false"
-               append-to-body="true"
-               search-enabled="false">
-      <ui-select-match placeholder="Standard Select">
-        <span> {{$select.selected.label}}</span>
-      </ui-select-match>
-      <ui-select-choices repeat="taskType in taskTypeOptions | filter: $select.search">
-        <span ng-bind-html="taskType.label"></span>
-      </ui-select-choices>
-    </ui-select>
+                       class="btn-group bootstrap-select form-control"
+                       ng-disabled="false"
+                       append-to-body="true"
+                       search-enabled="false">
+                    <ui-select-match placeholder="Standard Select">
+                      <span> {{$select.selected.label}}</span>
+                    </ui-select-match>
+                    <ui-select-choices repeat="taskType in taskTypeOptions | filter: $select.search">
+                      <span ng-bind-html="taskType.label"></span>
+                    </ui-select-choices>
+                  </ui-select>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="button" ng-click="ok()">确定</button>
+                <button class="btn btn-primary" type="button" ng-click="addTask()">确定</button>
                 <button class="btn btn-default" type="button" ng-click="cancel()">取消</button>
             </div>
     </div>

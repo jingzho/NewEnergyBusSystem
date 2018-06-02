@@ -4,7 +4,7 @@
   angular.module('demo.pages.tasks')
     .controller('AddTaskCtrl', AddTaskCtrl);
 
-  function AddTaskCtrl($scope) {
+  function AddTaskCtrl($scope, $http) {
     $scope.taskTypeOptions = [
       {label: 'Option 1', value: 1},
       {label: 'Option 2', value: 2},
@@ -18,7 +18,14 @@
     }
 
     $scope.addTask = function () {
-
+      let requestData = {
+        test: "test"
+      };
+      $http.post('http://localhost:3100/api/users/create', requestData).then(res => {
+        console.log(res);
+      });
     }
+
+    window.scp = $scope;
   }
 })();
