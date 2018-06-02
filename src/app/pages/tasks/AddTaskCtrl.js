@@ -6,10 +6,8 @@
 
   function AddTaskCtrl($scope) {
     $scope.taskTypeOptions = [
-      {label: 'Option 1', value: 1},
-      {label: 'Option 2', value: 2},
-      {label: 'Option 3', value: 3},
-      {label: 'Option 4', value: 4}
+      {label: '一般巡视', value: 1},
+      {label: '特殊巡视', value: 2}
     ];
     $scope.selectedTaskType = {};
 
@@ -20,5 +18,27 @@
     $scope.addTask = function () {
 
     }
+
+    $scope.open = open;
+    $scope.opened = false;
+    $scope.options = {
+        showWeeks: false
+    };
+
+    function open() {
+        $scope.opened = true;
+    }
+
+    $scope.end = end;
+    $scope.ended = false;
+    $scope.options = {
+        showWeeks: false
+    };
+
+    function end() {
+        $scope.ended = true;
+    }
+
   }
+
 })();

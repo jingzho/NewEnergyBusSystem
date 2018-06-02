@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('demo.pages.tasks', ['ui.select'])
+  angular.module('demo.pages.tasks', ['ui.select','ngSanitize'])
     .config(routeConfig);
 
   /** @ngInject */
