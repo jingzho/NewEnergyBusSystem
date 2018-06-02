@@ -29,13 +29,13 @@
           },
 
         }).state('tasks.addTask', {
-            url: '/tasks/addTask/',
+            url: '/tasks/addTask',
             title: '添加巡视任务',
             controller: 'AddTaskCtrl',
             templateUrl: 'app/pages/tasks/addTask.html',
 
         }).state('tasks.submitTask', {
-            url: '/tasks/submitTask/',
+            url: '/tasks/submitTask',
             // url: '/tasks/submitTask/:taskId',
             title: '填写巡视任务',
             controller: 'SubmitTaskCtrl',
