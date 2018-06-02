@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('demo.pages.tasks', [])
+  angular.module('demo.pages.tasks', ['ui.select'])
     .config(routeConfig);
 
   /** @ngInject */
@@ -30,6 +30,7 @@
         }).state('tasks.addTask', {
             url: '/tasks/addTask',
             title: '添加巡视任务',
+            controller: 'AddTaskCtrl',
             templateUrl: 'app/pages/tasks/addTask.html',
         }).state('tasks.results', {
           url: '/tasks/results',
