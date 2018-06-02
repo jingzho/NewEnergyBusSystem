@@ -55,7 +55,7 @@
             <tbody>
             <tr ng-repeat="item in tasksData">
               <td class="table-id">{{item.id}}</td>
-              <td>{{item.taskName}}</td>
+              <td ><a href="#/tasks/submitTask">{{item.taskName}}</a></td>
               <td>一般巡视</td>
               <td><button type="button" class="btn btn-primary">发布</button></td>
               <td>{{item.startDate}}</td>

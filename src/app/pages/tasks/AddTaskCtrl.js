@@ -4,7 +4,7 @@
   angular.module('demo.pages.tasks')
     .controller('AddTaskCtrl', AddTaskCtrl);
 
-  function AddTaskCtrl($scope) {
+  function AddTaskCtrl($scope, $stateParams) {
     $scope.taskTypeOptions = [
       {label: '一般巡视', value: 1},
       {label: '特殊巡视', value: 2}
@@ -13,6 +13,7 @@
 
     $scope.init = function () {
       console.log('initialized');
+      console.log($stateParams.taskId);
     }
 
     $scope.addTask = function () {
