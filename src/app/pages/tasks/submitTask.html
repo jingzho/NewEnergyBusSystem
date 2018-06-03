@@ -1,13 +1,96 @@
-<div class="modal-content" ng-init="init()">
-    <div class="modal-header">
-        <button type="button" class="close" ng-click="$dimdiss()" aria-label="Close">
-            <em class="ion-ios-close-empty sn-link-close"></em>
-        </button>
-        <h4 class="modal-title">填写巡视任务内容</h4>
+<div class="widgets" ng-init="init()">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="填写巡视任务内容" ba-panel-class="with-scroll">
+                <ba-wizard>
+                    <ba-wizard-step title="公交车辆基本信息" form="BusInfoForm">
+                        <form name="BusInfoForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="BusNo1">车辆编码</label>
+                                        <input type="text" class="form-control" id="BusNo1" name="BusNo" placeholder="请输入车辆编码" ng-model="BusInfoForm.BusNo" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="km1">公里数</label>
+                                        <input type="text" class="form-control" id="km1" name="km" placeholder="请输入公里数" ng-model="BusInfoForm.km" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="MaxTemp1">电池最高温度</label>
+                                        <input type="text" class="form-control" id="MaxTemp1" name="MaxTemp" placeholder="请输入电池最高温度" ng-model="BusInfoForm.MaxTemp" required>
+                                    </div>
+
+                                        <label for="MaxV1">电池总电压</label>
+                                        <input type="text" class="form-control" id="MaxV1" name="MaxV" placeholder="请输入电池总电压" ng-model="BusInfoForm.MaxV" required>
+                                    </div>
+                                </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="充电桩基本信息" form="ChargingInfoForm">
+                        <form name="ChargingInfoForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="CharingID">充电桩编码</label>
+                                        <input type="text" class="form-control" id="CharingID" name="CharingID" placeholder="请输入充电桩编码" ng-model="ChargingInfoForm.CharingID" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CharingTime">充电时长</label>
+                                        <input type="text" class="form-control" id="CharingTime" name="CharingTime" placeholder="请输入充电时长" ng-model="CharingInfoForm.CharingTime" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="CharingID">充电量</label>
+                                        <select class="form-control" title="充电量" selectpicker>
+                                            <option selected>10000</option>
+                                            <option>20000</option>
+                                            <option>30000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="充电完成情况"  form="CompleteInfoForm">
+                        <form name="CompleteInfoForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback">
+                                        <label for="CharingID">完成结束SOC</label>
+                                        <input type="text" class="form-control" id="completeSOC" name="completeSOC" placeholder="请输入SOC" ng-model="CompleteInfoForm.CompleteSOC" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="CharingID">完成最高电压</label>
+                                        <select class="form-control" title="Category" selectpicker>
+                                            <option selected>380V</option>
+                                            <option>220V</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span>测试</span>
+                                </label>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="提交成功">
+                        <form class="form-horizontal" name="finishForm" novalidate>
+                            您已成功提交了巡视表单！
+                        </form>
+                    </ba-wizard-step>
+                </ba-wizard>
+            </div>
+        </div>
     </div>
-
-
-
     <div class="modal-footer">
         <button class="btn btn-primary" type="button" ng-click="ok()">确定</button>
         <button class="btn btn-default" type="button" ng-click="cancel()">取消</button>

@@ -52,9 +52,6 @@
           url: '/tasks/url',
           title: '编辑页面',
           templateUrl: 'app/pages/tasks/xxxx.html',
-          sidebarMeta: {
-            order: 1,
-          },
         }).state('tasks.routes', {
           url: '/tasks/routes',
           title: '巡视轨迹',

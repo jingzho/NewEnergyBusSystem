@@ -5,7 +5,6 @@
     .controller('AddTaskCtrl', AddTaskCtrl);
 
 
-
   function AddTaskCtrl($scope, $http, $stateParams) {
     $scope.taskTypeOptions = [
       {label: '一般巡视', value: 1},

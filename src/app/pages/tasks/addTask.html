@@ -35,20 +35,20 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6">
-                    <label class="col-md-4">任务开始日期</label>
-                    <p class="input-group col-md-6">
-                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="dt" is-open="opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" />
+                <div class="col-md-4">
+                    <label class="col-md-6 ">任务开始日期</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="dt" is-open="opened" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" placeholder="请选择开始日期" />
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
                         </span>
-                    </p>
+                    </div>
                 </div>
 
-            <div class="col-md-6">
-                <label class="col-md-4">任务结束日期</label>
-                <div class="input-group col-md-6">
-                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="dt" is-open="ended" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" />
+            <div class="col-md-4">
+                <label class="col-md-6">任务结束日期</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" datepicker-options="options" ng-model="dt" is-open="ended" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false" placeholder="请选择结束日期"/>
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="end()"><i class="glyphicon glyphicon-calendar"></i></button>
                     </span>
