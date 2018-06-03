@@ -59,10 +59,11 @@
           sidebarMeta: {
             order: 2,
           },
-        }).state('tasks.forms', {
-          url: '/tasks/forms',
+        }).state('tasks.taskForm', {
+          url: '/tasks/taskForm',
           title: '巡视表单',
-          disabled: true,
+          controller: 'TaskFormCtrl',
+          templateUrl: 'app/pages/tasks/taskForm.html',
           sidebarMeta: {
             order: 2,
           },

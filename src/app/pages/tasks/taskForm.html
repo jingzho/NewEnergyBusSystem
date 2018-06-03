@@ -1,0 +1,68 @@
+ <div class="widgets">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="btn-list clearfix ng-scope">
+                    <li>
+                        <a type="button" class="btn btn-primary">添加</a>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default" disabled>编辑</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default" disabled>删除</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default">导入</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default">导出</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div ba-panel ba-panel-title="巡视表单" ba-panel-class="with-scroll">
+                    <div class="horizontal-scroll">
+                        <table class="table" st-table="FormsData">
+                            <thead>
+                            <tr class="sortable ">
+                                <th class="table-id" st-sort="id" st-sort-default="true">#</th>
+                                <th st-sort="formName">巡视表单名称</th>
+                                <th st-sort="formType">巡视表单类型</th>
+                                <th st-sort="status">使用状态</th>
+                                <th st-sort="createDate">制作日期</th>
+                                <th st-sort="creatMan">制作人</th>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="item in formsData">
+                                <td class="table-id">{{item.id}}</td>
+                                <td ><a>{{item.formName}}</a></td>
+                                <td>{{item.formType}}</td>
+                                <td><button type="button" class="btn btn-primary">使用中</button></td>
+                                <td>{{item.createDate}}</td>
+                                <td>{{item.createMan}}</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="8" class="text-center">
+                                    <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="2"></div>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </div>
