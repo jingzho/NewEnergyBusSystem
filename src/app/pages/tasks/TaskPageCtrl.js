@@ -48,38 +48,6 @@
           });
       }
     }();
-<<<<<<< .merge_file_nJEwff
-      $scope.addTask = function () {
-        $uibModal.open({
-          animation: true,
-          templateUrl: 'app/pages/ui/modals/addTask.html',
-          size: 'md',
-          resolve: {
-            items: function () {
-            return $scope.items;
-            }
-          }
-        })
-      }
-      $scope.ok = function (e) {
-          console.log(e);
-          console.log($scope.modalDatas);
-            var http = new XMLHttpRequest()
-            http.onreadystatechange= function () {
-              if (http.readyState==4)
-              {// 4 = "loaded"
-                if (http.status==200)
-                {// 200 = OK
-                  console.log(http.response)
-                }
-              }
-            };
-            http.setRequestHeader()
-            http.open("POST","http://localhost:3100/addTask",true);
-            http.send($scope.modalDatas);
-      }
-=======
->>>>>>> .merge_file_UA6qBH
 
 /*    $scope.tasksData = [
       {
