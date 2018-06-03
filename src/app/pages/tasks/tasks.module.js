@@ -1,7 +1,4 @@
-/**
- * @author v.lugovsky
- * created on 16.12.2015
- */
+
 (function () {
   'use strict';
 
@@ -52,13 +49,6 @@
           url: '/tasks/url',
           title: '编辑页面',
           templateUrl: 'app/pages/tasks/xxxx.html',
-        }).state('tasks.routes', {
-          url: '/tasks/routes',
-          title: '巡视轨迹',
-          disabled: true,
-          sidebarMeta: {
-            order: 2,
-          },
         }).state('tasks.taskForm', {
           url: '/tasks/taskForm',
           title: '巡视表单',

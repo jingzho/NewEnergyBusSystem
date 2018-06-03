@@ -82,21 +82,12 @@
       icon: 'ion-person',
       subMenu: [
       {
-        title: '管理人员',
-        disabled: true
+        title: '巡检人员绩效考核',
       },
       {
-        title: '外协人员',
-        disabled: true
+        title: '绩效考核指标管理',
       },
-      {
-        title: '设备厂家人员',
-        disabled: true
-      },
-      {
-        title: '其它人员',
-        disabled: true
-      }]
+      ]
     });
     baSidebarServiceProvider.addStaticItem({
       title: '系统管理',
