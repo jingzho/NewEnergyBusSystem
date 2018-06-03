@@ -48,6 +48,7 @@
           });
       }
     }();
+<<<<<<< .merge_file_nJEwff
       $scope.addTask = function () {
         $uibModal.open({
           animation: true,
@@ -77,6 +78,8 @@
             http.open("POST","http://localhost:3100/addTask",true);
             http.send($scope.modalDatas);
       }
+=======
+>>>>>>> .merge_file_UA6qBH
 
 /*    $scope.tasksData = [
       {
