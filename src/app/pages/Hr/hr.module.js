@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    angular.module('demo.pages.HR', ['ui.select'])
+    angular.module('demo.pages.Hr', ['ui.select'])
         .config(routeConfig);
 
     /** @ngInject */
@@ -17,10 +17,10 @@
                     icon: 'ion-ios-clock-outline',
                     order: 300,
                 },
-            }).state('HR.allstaff', {
-            url: '/HR/allstaff',
+            }).state('HR.allStaff', {
+            url: '/Hr/allStaff',
             title: '巡检人员绩效考核',
-            templateUrl: 'app/pages/HR/allstaff.html',
+            templateUrl: 'app/pages/Hr/allStaff.html',
             sidebarMeta: {
                 order: 0,
             },
@@ -38,10 +38,10 @@
         //     controller: 'SubmitTaskCtrl',
         //     templateUrl: 'app/pages/tasks/submitTask.html',
 
-        }).state('HR.hrIndex', {
-            url: '/HR/hrIndex',
+        }).state('Hr.hrIndex', {
+            url: '/Hr/hrIndex',
             title: '绩效考核指标管理',
-            templateUrl: 'app/pages/HR/hrIndex.html',
+            templateUrl: 'app/pages/Hr/hrIndex.html',
             sidebarMeta: {
                 order: 1,
             },

@@ -1,7 +1,4 @@
-/**
- * @author v.lugovsky
- * created on 16.12.2015
- */
+
 (function () {
   'use strict';
 
@@ -10,7 +7,8 @@
 
     'BlurAdmin.pages.dashboard',
     'demo.pages.tasks',
-    'demo.pages.devices'
+    'demo.pages.devices',
+    'demo.pages.Hr'
     /*'BlurAdmin.pages.ui',
     'BlurAdmin.pages.components',
     'BlurAdmin.pages.form',
