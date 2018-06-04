@@ -75,18 +75,18 @@
         disabled: true
       }]
     });
-    baSidebarServiceProvider.addStaticItem({
-      title: '人员管理',
-      icon: 'ion-person',
-      subMenu: [
-      {
-        title: '巡检人员绩效考核',
-      },
-      {
-        title: '绩效考核指标管理',
-      },
-      ]
-    });
+    // baSidebarServiceProvider.addStaticItem({
+    //   title: '人员管理',
+    //   icon: 'ion-person',
+    //   subMenu: [
+    //   {
+    //     title: '巡检人员绩效考核',
+    //   },
+    //   {
+    //     title: '绩效考核指标管理',
+    //   },
+    //   ]
+    // });
     baSidebarServiceProvider.addStaticItem({
       title: '系统管理',
       icon: 'ion-gear-b',

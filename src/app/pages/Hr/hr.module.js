@@ -2,22 +2,22 @@
 (function () {
     'use strict';
 
-    angular.module('demo.pages.Hr', ['ui.select'])
+    angular.module('demo.pages.Hr', [])
         .config(routeConfig);
 
     /** @ngInject */
     function routeConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('HR', {
+            .state('Hr', {
                 title: '人员管理',
                 template : '<ui-view  autoscroll="true" autoscroll-body-top></ui-view>',
                 abstract: true,
-                controller: 'StaffCtrl',
+                controller: 'HrPageCtrl',
                 sidebarMeta: {
                     icon: 'ion-ios-clock-outline',
                     order: 300,
                 },
-            }).state('HR.allStaff', {
+            }).state('Hr.allStaff', {
             url: '/Hr/allStaff',
             title: '巡检人员绩效考核',
             templateUrl: 'app/pages/Hr/allStaff.html',
